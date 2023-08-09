@@ -1,0 +1,17 @@
+.navBar {
+  @apply flex items-center gap-x-[60px];
+}
+
+.nav {
+  ul {
+    @apply flex gap-x-[47px];
+  }
+}
+
+.services {
+  @apply flex gap-x-9;
+
+  a {
+    @apply flex justify-center items-center w-[31px] h-[31px] border border-black rounded-full;
+  }
+}

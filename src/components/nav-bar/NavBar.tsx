@@ -2,12 +2,13 @@ import { getIcon } from '@/helpers/getIcon';
 import { EnumIcons } from '@/types';
 import Link from 'next/link';
 import { FC } from 'react';
+import styles from './NavBar.module.scss';
 import { navData } from './navData';
 
-const Navigation: FC = () => {
+const NavBar: FC = () => {
   return (
-    <div className='nav-bar'>
-      <nav className='nav'>
+    <div className={styles.navBar}>
+      <nav className={styles.nav}>
         <ul>
           {navData.map(item => {
             return (
@@ -20,12 +21,12 @@ const Navigation: FC = () => {
           })}
         </ul>
       </nav>
-      <div className='services'>
-        <span className='services-link'>{getIcon(EnumIcons.user)}</span>
-        <span className='services-link'>{getIcon(EnumIcons.cart)}</span>
+      <div className={styles.services}>
+        <Link href='/user'>{getIcon(EnumIcons.user)}</Link>
+        <Link href='/cart'>{getIcon(EnumIcons.cart)}</Link>
       </div>
     </div>
   );
 };
 
-export default Navigation;
+export default NavBar;

@@ -1,3 +1,4 @@
+import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Suspense>
           <main>{children}</main>
         </Suspense>
+        <Footer />
       </body>
     </html>
   );

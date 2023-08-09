@@ -1,0 +1,7 @@
+.header {
+  @apply py-[30px] md:py-[40px];
+}
+
+.content {
+  @apply flex justify-between items-center;
+}

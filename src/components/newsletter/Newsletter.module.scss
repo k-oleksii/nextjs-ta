@@ -1,0 +1,27 @@
+.newsletter {
+  @apply pt-3.5 pr-[13px] pb-[21px] pl-3.5 bg-secondary-jetBlack rounded-[10px];
+}
+
+.title {
+  @apply block mb-[29px] font-poppins font-semibold text-lg text-white;
+}
+
+.fieldGroup {
+  @apply flex;
+}
+
+.input {
+  @apply h-[39px] px-2.5 font-poppins text-xs text-secondary-grey bg-secondary-charcoalBlack outline-0 border-0 rounded-l;
+
+  &::placeholder {
+    @apply text-secondary-grey;
+  }
+}
+
+.btn[type='submit'] {
+  @apply pt-[11px] px-[22px] pb-2.5 font-poppins font-medium text-2xs bg-black rounded-r;
+}
+
+.description {
+  @apply block mt-[19px] font-manrope font-medium text-3xs text-white text-opacity-5;
+}

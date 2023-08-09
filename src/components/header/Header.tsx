@@ -1,13 +1,16 @@
 import Logo from '@/components/Logo/Logo';
 import { FC } from 'react';
-import Navigation from '../nav/Navigation';
+import NavBar from '../nav-bar/NavBar';
+import styles from './Header.module.scss';
 
 const Header: FC = () => {
   return (
-    <header className='header'>
-      <div className='container'>
-        <Logo />
-        <Navigation />
+    <header className={styles.header}>
+      <div className='container mx-auto'>
+        <div className={styles.content}>
+          <Logo />
+          <NavBar />
+        </div>
       </div>
     </header>
   );

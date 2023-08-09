@@ -2,9 +2,18 @@ import Link from 'next/link';
 import { FC } from 'react';
 import styles from './Logo.module.scss';
 
-const Logo: FC = () => {
+interface LogoProps {
+  additionalClass?: string;
+}
+
+const Logo: FC<LogoProps> = ({ additionalClass }) => {
+  const logoClass = [styles.logo];
+  if (additionalClass) {
+    logoClass.push(additionalClass);
+  }
+
   return (
-    <div className={styles.logo}>
+    <div className={logoClass.join(' ')}>
       <Link href='/'>Logo Here</Link>
     </div>
   );

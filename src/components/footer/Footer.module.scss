@@ -1,0 +1,49 @@
+.footer {
+  @apply pt-[19px] px-[35px] md:pt-20 md:pb-[66px] bg-black text-white;
+}
+
+.logo {
+  @apply text-center;
+
+  a {
+    @apply text-4xl;
+  }
+}
+
+.info {
+  @apply flex;
+}
+
+.menu {
+  @apply flex mr-[96px];
+}
+
+.title {
+  @apply font-poppins font-semibold	text-base md:text-lg;
+}
+
+.list {
+  li {
+    @apply flex items-center gap-x-[25px];
+
+    &:not(:last-child) {
+      @apply mb-6;
+    }
+  }
+
+  a {
+    @apply flex items-center gap-x-[25px];
+  }
+}
+
+.contact {
+  @apply mr-[48px];
+}
+
+.contactIcon {
+  @apply block w-6 h-6;
+
+  svg {
+    @apply w-full h-full fill-white;
+  }
+}
