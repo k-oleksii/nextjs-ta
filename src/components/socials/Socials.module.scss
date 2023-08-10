@@ -1,0 +1,11 @@
+.socials {
+  @apply flex justify-center md:justify-start gap-x-6;
+}
+
+.item {
+  @apply flex justify-center items-center w-[30px] h-[30px] bg-secondary-charcoalGray rounded-full;
+
+  svg {
+    @apply block w-[15px] fill-white;
+  }
+}

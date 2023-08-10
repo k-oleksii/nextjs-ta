@@ -1,5 +1,5 @@
 'use client';
-import { createSubscribe } from '@/app/services/createSubscribe';
+import { createSubscribe } from '@/services/createSubscribe';
 import { ChangeEvent, FC, FormEvent, useState } from 'react';
 import styles from './Newsletter.module.scss';
 

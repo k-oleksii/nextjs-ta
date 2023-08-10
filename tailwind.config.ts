@@ -10,12 +10,14 @@ const config: Config = {
     colors: {
       black: '#000',
       white: '#fff',
+      transparent: 'transparent',
       secondary: {
         bg: '#fbfbfb',
         charcoalBlack: '#1e1e1e',
         jetBlack: '#131313',
         grey: '#616161',
         darkGray: '#1f1f1f',
+        charcoalGray: '#262626',
         mediumGray: '#717171',
         silverGray: '#8d8d8d',
         lightGray: '#e0e0e0',
@@ -45,7 +47,7 @@ const config: Config = {
       },
       fontSize: {
         xs: ['11px', '18px'],
-        '2xs': ['12px', '18px'],
+        '2xs': ['12px', '19px'],
         '3xs': ['13px', '20px'],
         sm: ['14px', '20px'],
         base: ['16px', '24px'],

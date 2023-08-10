@@ -1,4 +1,4 @@
-import Logo from '@/components/Logo/Logo';
+import Logo from '@/components/logo/Logo';
 import { FC } from 'react';
 import NavBar from '../nav-bar/NavBar';
 import styles from './Header.module.scss';

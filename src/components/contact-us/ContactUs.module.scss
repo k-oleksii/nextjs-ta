@@ -1,0 +1,37 @@
+.contact {
+  @apply flex flex-col gap-y-[30px] pt-[5px] px-[5px] pb-16 bg-white rounded-[10px];
+}
+
+.info {
+  @apply w-full pt-[40px] pr-[20px] pb-[36px] pl-[40px] text-white bg-black rounded-[10px];
+}
+
+.title {
+  @apply block font-semibold text-xl md:text-3xl;
+}
+
+.subtitle {
+  @apply block text-xs md:text-lg text-secondary-lightSilver;
+}
+
+.contactIcon {
+  @apply block w-6 h-6;
+
+  svg {
+    @apply w-full h-full fill-white;
+  }
+}
+
+.list {
+  li {
+    @apply flex items-center gap-x-[25px];
+
+    &:not(:last-child) {
+      @apply mb-6;
+    }
+  }
+
+  a {
+    @apply flex items-center gap-x-[25px];
+  }
+}

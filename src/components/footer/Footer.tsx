@@ -2,7 +2,7 @@ import { getIcon } from '@/helpers/getIcon';
 import { EnumIcons } from '@/types';
 import Link from 'next/link';
 import { FC } from 'react';
-import Logo from '../Logo/Logo';
+import Logo from '../logo/Logo';
 import Newsletter from '../newsletter/Newsletter';
 import styles from './Footer.module.scss';
 import { footerData } from './footerData';

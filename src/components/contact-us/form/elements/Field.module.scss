@@ -1,0 +1,43 @@
+.field {
+}
+
+.label {
+  @apply block font-medium text-2xs text-secondary-silverGray;
+}
+
+.input {
+  @apply w-full font-medium text-sm text-secondary-silverGray bg-transparent border-b border-b-secondary-silverGray outline-none;
+}
+
+.radio {
+  input {
+    @apply hidden;
+  }
+
+  label {
+    @apply flex items-center gap-x-2.5;
+  }
+}
+
+.indicator {
+  @apply relative block w-[13px] h-[13px] bg-secondary-lightGray rounded-full;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url('/check.svg') no-repeat;
+    width: 7px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.caption {
+  @apply block font-semibold text-2xs text-black;
+}
+
+.group {
+  @apply flex gap-x-5;
+}
