@@ -43,7 +43,7 @@ const ContactUsForm: FC = () => {
     message: '',
   });
 
-  const handleRadioChange = (selectedValue: FormData) => {
+  const handleRadioChange = (selectedValue: { [key: string]: string }) => {
     setFormData(prevData => ({ ...prevData, ...selectedValue }));
   };
 
