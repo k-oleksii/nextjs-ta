@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply h-full;
+}
+
 body {
-  @apply font-poppins text-black bg-secondary-bg;
+  @apply h-full font-poppins text-black bg-secondary-bg;
 }

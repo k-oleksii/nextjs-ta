@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const createSubscription = async (email: string) => {
+export const createSubscribe = async (email: string) => {
   try {
     const response = await axios.post('/api/subscribe', { email });
 

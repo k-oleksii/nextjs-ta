@@ -1,15 +1,25 @@
 'use client';
-import { createSubscription } from '@/services/createSubscription';
+import { createSubscribe } from '@/app/services/createSubscribe';
 import { ChangeEvent, FC, FormEvent, useState } from 'react';
 import styles from './Newsletter.module.scss';
 
-const Newsletter: FC = () => {
+interface INewsletterProps {
+  additionalClass?: string;
+}
+
+const Newsletter: FC<INewsletterProps> = ({ additionalClass }) => {
   const [email, setEmail] = useState('');
+
+  const newsletterClass = [styles.newsletter];
+
+  if (additionalClass) {
+    newsletterClass.push(additionalClass);
+  }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    await createSubscription(email);
+    await createSubscribe(email);
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +27,7 @@ const Newsletter: FC = () => {
   };
 
   return (
-    <div className={styles.newsletter}>
+    <div className={newsletterClass.join(' ')}>
       <span className={styles.title}>Join Our Newsletter</span>
       <form onSubmit={handleSubmit}>
         <div className={styles.fieldGroup}>

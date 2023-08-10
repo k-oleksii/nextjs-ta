@@ -1,5 +1,5 @@
 .footer {
-  @apply pt-[19px] px-[35px] md:pt-20 md:pb-[66px] bg-black text-white;
+  @apply pt-[19px] md:pt-20 md:pb-[66px] bg-black text-white;
 }
 
 .logo {
@@ -11,15 +11,19 @@
 }
 
 .info {
-  @apply flex;
+  @apply flex items-start mt-[45px] pt-[30px] border-t border-t-white;
 }
 
 .menu {
-  @apply flex mr-[96px];
+  @apply flex flex-1 gap-x-[60px] mr-[96px];
 }
 
 .title {
-  @apply font-poppins font-semibold	text-base md:text-lg;
+  @apply block font-poppins font-semibold	text-base md:text-lg;
+
+  &:not(:last-child) {
+    @apply mb-[20px];
+  }
 }
 
 .list {
@@ -37,7 +41,7 @@
 }
 
 .contact {
-  @apply mr-[48px];
+  @apply mr-[48px] max-w-[331px];
 }
 
 .contactIcon {
@@ -46,4 +50,8 @@
   svg {
     @apply w-full h-full fill-white;
   }
+}
+
+.newsletter {
+  @apply max-w-[304px];
 }

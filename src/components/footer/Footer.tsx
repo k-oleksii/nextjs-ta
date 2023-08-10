@@ -60,7 +60,7 @@ const Footer: FC = () => {
               </div>
             ))}
           </div>
-          <Newsletter />
+          <Newsletter additionalClass={styles.newsletter} />
         </div>
       </div>
     </footer>

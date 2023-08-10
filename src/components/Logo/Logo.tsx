@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { FC } from 'react';
 import styles from './Logo.module.scss';
 
-interface LogoProps {
+interface ILogoProps {
   additionalClass?: string;
 }
 
-const Logo: FC<LogoProps> = ({ additionalClass }) => {
+const Logo: FC<ILogoProps> = ({ additionalClass }) => {
   const logoClass = [styles.logo];
   if (additionalClass) {
     logoClass.push(additionalClass);

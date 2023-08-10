@@ -11,7 +11,7 @@
 }
 
 .input {
-  @apply h-[39px] px-2.5 font-poppins text-xs text-secondary-grey bg-secondary-charcoalBlack outline-0 border-0 rounded-l;
+  @apply w-full h-[39px] px-2.5 font-poppins text-xs text-secondary-grey bg-secondary-charcoalBlack outline-0 border-0 rounded-l;
 
   &::placeholder {
     @apply text-secondary-grey;
