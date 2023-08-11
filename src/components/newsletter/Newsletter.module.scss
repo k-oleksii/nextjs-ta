@@ -19,7 +19,11 @@
 }
 
 .btn[type='submit'] {
-  @apply pt-[11px] px-[22px] pb-2.5 font-poppins font-medium text-2xs bg-black rounded-r;
+  @apply pt-[11px] px-[22px] pb-2.5 font-poppins font-medium text-2xs bg-black rounded-r transition-all;
+
+  &:hover {
+    @apply bg-secondary-jetBlack;
+  }
 }
 
 .description {
