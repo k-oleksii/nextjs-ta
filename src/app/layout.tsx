@@ -1,8 +1,15 @@
+// Core
+import type { Metadata } from 'next';
+
+// Components
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
+
+// Styles
 import styles from '@/styles/Layout.module.scss';
 import '@/styles/globals.scss';
-import type { Metadata } from 'next';
+
+// Fonts
 import { inter, manrope, poppins, roboto } from './fonts';
 
 export const metadata: Metadata = {

@@ -1,12 +1,23 @@
 'use client';
-
-import { getIcon } from '@/helpers/getIcon';
-import { EnumIcons } from '@/types';
+// Core
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
-import Logo from '../logo/Logo';
+
+// Components
+
+import Logo from '@/components/logo/Logo';
+
+// Helpers
+import { getIcon } from '@/helpers/getIcon';
+
+// Styles
 import styles from './NavBar.module.scss';
+
+// Types
+import { EnumIcons } from '@/types';
+
+// Data
 import { navData } from './navData';
 
 interface INavProps {

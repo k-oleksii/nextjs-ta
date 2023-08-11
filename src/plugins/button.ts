@@ -1,7 +1,8 @@
+// Tailwindcss
 import { PluginAPI } from 'tailwindcss/types/config';
-
 const plugin = require('tailwindcss/plugin');
 
+// Button Plugin
 module.exports = plugin(function ({ addComponents }: PluginAPI) {
   const button = {
     '.button': {

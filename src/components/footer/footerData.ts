@@ -8,7 +8,7 @@ export const footerData = [
         name: 'About',
       },
       {
-        link: '/contact',
+        link: '/contact-us',
         name: 'Contact',
       },
       {

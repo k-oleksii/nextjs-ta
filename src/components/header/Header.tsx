@@ -1,26 +1,37 @@
 'use client';
-import Logo from '@/components/logo/Logo';
-import { getIcon } from '@/helpers/getIcon';
-import { default as stylesGlobal } from '@/styles/Layout.module.scss';
-import { EnumIcons } from '@/types';
+// Core
 import { usePathname } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
-import NavBar from '../nav-bar/NavBar';
+
+// Components
+import Logo from '@/components/logo/Logo';
+import NavBar from '@/components/nav-bar/NavBar';
+
+// Helpers
+import { getIcon } from '@/helpers/getIcon';
+
+// Styles
+import { default as stylesGlobal } from '@/styles/Layout.module.scss';
 import styles from './Header.module.scss';
+
+// Types
+import { EnumIcons } from '@/types';
+
 const Header: FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const pathname = usePathname();
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen); //
+
+  const handleToggleNav = () => {
+    setIsNavOpen(!isNavOpen);
   };
 
-  const closeNav = () => {
+  const handleCloseNav = () => {
     setIsNavOpen(false);
   };
 
   useEffect(() => {
-    closeNav();
+    handleCloseNav();
   }, [pathname]);
 
   return (
@@ -28,8 +39,8 @@ const Header: FC = () => {
       <div className={stylesGlobal.constrained}>
         <div className={styles.content}>
           <Logo />
-          <NavBar isOpen={isNavOpen} onClose={closeNav} />
-          <button onClick={toggleNav} className={styles.btn}>
+          <NavBar isOpen={isNavOpen} onClose={handleCloseNav} />
+          <button onClick={handleToggleNav} className={styles.btn}>
             {getIcon(EnumIcons.burger)}
           </button>
         </div>

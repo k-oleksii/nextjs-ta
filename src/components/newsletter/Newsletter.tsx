@@ -1,13 +1,17 @@
 'use client';
-import { createSubscribe } from '@/services/createSubscribe';
+// Core
 import { ChangeEvent, FC, FormEvent, useState } from 'react';
+
+// Services
+import { createSubscribe } from '@/services/createSubscribe';
+
+// Types
+import { IAdditionalClass } from '@/types';
+
+// Styles
 import styles from './Newsletter.module.scss';
 
-interface INewsletterProps {
-  additionalClass?: string;
-}
-
-const Newsletter: FC<INewsletterProps> = ({ additionalClass }) => {
+const Newsletter: FC<IAdditionalClass> = ({ additionalClass }) => {
   const [email, setEmail] = useState('');
 
   const newsletterClass = [styles.newsletter];
@@ -22,7 +26,7 @@ const Newsletter: FC<INewsletterProps> = ({ additionalClass }) => {
     await createSubscribe(email);
   };
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
 
@@ -34,7 +38,7 @@ const Newsletter: FC<INewsletterProps> = ({ additionalClass }) => {
           <input
             type='email'
             value={email}
-            onChange={handleChange}
+            onChange={handleChangeInput}
             className={styles.input}
             placeholder='Your email address'
           />

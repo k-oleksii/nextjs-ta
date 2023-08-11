@@ -1,18 +1,23 @@
-import { getIcon } from '@/helpers/getIcon';
-import { default as stylesGlobal } from '@/styles/Layout.module.scss';
-import { EnumIcons } from '@/types';
+// Core
 import Link from 'next/link';
 import { FC } from 'react';
+
+// Components
 import Logo from '../logo/Logo';
 import Newsletter from '../newsletter/Newsletter';
-import styles from './Footer.module.scss';
-import { footerData } from './footerData';
 
-const contactData = [
-  { id: '1', name: 'phone', text: '+1012 3456 789' },
-  { id: '2', name: 'email', text: '+1012 3456 789' },
-  { id: '3', name: 'phone', text: '+1012 3456 789' },
-];
+// Helpers
+import { getIcon } from '@/helpers/getIcon';
+
+// Styles
+import { default as stylesGlobal } from '@/styles/Layout.module.scss';
+import styles from './Footer.module.scss';
+
+// Types
+import { EnumIcons } from '@/types';
+
+// Data
+import { footerData } from './footerData';
 
 const Footer: FC = () => {
   return (

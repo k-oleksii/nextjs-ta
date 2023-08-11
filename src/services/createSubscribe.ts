@@ -1,5 +1,7 @@
+// Core
 import axios from 'axios';
 
+// Post request to create a subscription
 export const createSubscribe = async (email: string) => {
   try {
     const response = await axios.post('/api/subscribe', { email });

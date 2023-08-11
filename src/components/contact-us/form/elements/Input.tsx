@@ -1,8 +1,11 @@
+// Core
 import { ChangeEvent, FC, useState } from 'react';
 import ReactInputMask from 'react-input-mask';
+
+// Styles
 import styles from './Field.module.scss';
 
-interface InputProps {
+interface IInputProps {
   placeholder?: string;
   id?: string;
   type?: string;
@@ -13,7 +16,7 @@ interface InputProps {
   onChange?: (fieldName: string, value: any) => void;
 }
 
-const Input: FC<InputProps> = ({
+const Input: FC<IInputProps> = ({
   placeholder = '',
   id = '',
   type = 'text',
@@ -22,7 +25,7 @@ const Input: FC<InputProps> = ({
   label = '',
   mask = '',
   onChange,
-}: InputProps) => {
+}: IInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {

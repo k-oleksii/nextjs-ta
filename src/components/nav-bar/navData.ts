@@ -1,3 +1,4 @@
+// Mock data
 export const navData = [
   {
     id: '1',

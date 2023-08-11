@@ -2,6 +2,10 @@
   @apply w-full;
 }
 
+.element {
+  @apply relative block;
+}
+
 .focused {
   .label {
     @apply text-black;

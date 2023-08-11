@@ -1,5 +1,8 @@
-import ContactUs from '@/components/contact-us';
+// Core
 import { Metadata } from 'next';
+
+// Components
+import ContactUs from '@/components/contact-us/ContactUs';
 
 export const metadata: Metadata = {
   title: 'Contact Us',

@@ -1,9 +1,10 @@
+// Core
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Shop',
+  title: 'Features',
 };
 
 export default function ContactUs() {
-  return <span>Shop</span>;
+  return <span>Features</span>;
 }

@@ -1,4 +1,4 @@
-import { IIcons } from '@/types';
+// Components
 import { Arrow } from './Arrow';
 import { Burger } from './Burger';
 import { Cart } from './Cart';
@@ -11,6 +11,9 @@ import { Location } from './Location';
 import { Phone } from './Phone';
 import { Twitter } from './Twitter';
 import { User } from './User';
+
+// Types
+import { IIcons } from '@/types';
 
 export const icons: IIcons = {
   cart: Cart,

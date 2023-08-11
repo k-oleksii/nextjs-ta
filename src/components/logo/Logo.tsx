@@ -1,12 +1,14 @@
+// Core
 import Link from 'next/link';
 import { FC } from 'react';
+
+// Styles
 import styles from './Logo.module.scss';
 
-interface ILogoProps {
-  additionalClass?: string;
-}
+// Types
+import { IAdditionalClass } from '@/types';
 
-const Logo: FC<ILogoProps> = ({ additionalClass }) => {
+const Logo: FC<IAdditionalClass> = ({ additionalClass }) => {
   const logoClass = [styles.logo];
 
   if (additionalClass) {

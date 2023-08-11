@@ -1,14 +1,17 @@
-import { getIcon } from '@/helpers/getIcon';
-import { EnumIcons } from '@/types';
+// Core
 import Link from 'next/link';
 import { FC } from 'react';
+
+// Helpers
+import { getIcon } from '@/helpers/getIcon';
+
+// Types
+import { EnumIcons, IAdditionalClass } from '@/types';
+
+// Styles
 import styles from './Socials.module.scss';
 
-interface ISocialsProps {
-  additionalClass?: string;
-}
-
-const Socials: FC<ISocialsProps> = ({ additionalClass }) => {
+const Socials: FC<IAdditionalClass> = ({ additionalClass }) => {
   const socialsClass = [styles.socials];
   if (additionalClass) {
     socialsClass.push(additionalClass);

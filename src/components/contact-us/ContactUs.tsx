@@ -1,10 +1,19 @@
-import Socials from '@/components/socials/Socials';
-import { getIcon } from '@/helpers/getIcon';
-import { default as stylesGlobal } from '@/styles/Layout.module.scss';
-import { EnumIcons } from '@/types';
+// Core
 import { FC } from 'react';
-import styles from './ContactUs.module.scss';
+
+// Components
+import Socials from '@/components/socials/Socials';
 import ContactUsForm from './form/ContactUsForm';
+
+// Helpers
+import { getIcon } from '@/helpers/getIcon';
+
+// Styles
+import { default as stylesGlobal } from '@/styles/Layout.module.scss';
+import styles from './ContactUs.module.scss';
+
+// Types
+import { EnumIcons } from '@/types';
 
 const ContactUs: FC = () => {
   return (

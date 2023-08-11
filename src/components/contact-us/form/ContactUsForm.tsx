@@ -1,9 +1,16 @@
 'use client';
-import { createMessage } from '@/services/createMessage';
-import { IContact } from '@/types';
+// Core
 import { FC, FormEvent, useState } from 'react';
+
+// Services
+import { createMessage } from '@/services/createMessage';
+
+// Form Elements
 import Input from './elements/Input';
 import Radio from './elements/Radio';
+
+// Types
+import { IContact } from '@/types';
 
 const options = [
   {
@@ -41,10 +48,6 @@ const ContactUsForm: FC = () => {
     subject: '',
     message: '',
   });
-
-  const handleRadioChange = (selectedValue: { [key: string]: string }) => {
-    setFormData(prevData => ({ ...prevData, ...selectedValue }));
-  };
 
   const handleInputChange = (fieldName: string, value: any) => {
     setFormData(prevData => ({ ...prevData, [fieldName]: value }));
@@ -98,7 +101,7 @@ const ContactUsForm: FC = () => {
             options={options}
             caption='Select Subject?'
             name='subject'
-            onChange={handleRadioChange}
+            onChange={handleInputChange}
           />
         </div>
         <div className='w-full col-span-full	'>
