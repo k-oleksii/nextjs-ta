@@ -4,7 +4,7 @@ import axios from 'axios';
 export const createMessage = async (data: IContact) => {
   try {
     const response = await axios.post('/api/contact', data);
-    console.log('response', response);
+
     if (response.status === 200) {
       console.log('Message sent');
     } else {

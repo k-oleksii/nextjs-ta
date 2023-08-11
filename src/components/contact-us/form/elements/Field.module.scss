@@ -2,12 +2,22 @@
   @apply w-full;
 }
 
+.focused {
+  .label {
+    @apply text-black;
+  }
+
+  .input {
+    @apply border-b-black text-black;
+  }
+}
+
 .label {
-  @apply block font-medium text-2xs text-secondary-silverGray;
+  @apply block font-medium text-2xs text-secondary-silverGray transition-all;
 }
 
 .input {
-  @apply w-full pt-[5px] pb-2.5 font-medium text-sm text-secondary-silverGray bg-transparent border-b border-b-secondary-silverGray outline-none;
+  @apply w-full pt-[5px] pb-2.5 font-medium text-sm text-secondary-silverGray bg-transparent border-b border-b-secondary-silverGray outline-none transition-all;
 }
 
 .radio {

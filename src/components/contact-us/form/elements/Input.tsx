@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from 'react';
+import { ChangeEvent, FC, useState } from 'react';
 import ReactInputMask from 'react-input-mask';
 import styles from './Field.module.scss';
 
@@ -23,11 +23,22 @@ const Input: FC<InputProps> = ({
   mask = '',
   onChange,
 }: InputProps) => {
+  const [isFocused, setIsFocused] = useState(false);
+
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
+
     if (onChange) {
       onChange(name, value);
     }
+  };
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
   };
 
   const inputElement =
@@ -38,6 +49,8 @@ const Input: FC<InputProps> = ({
         maskChar=''
         className={styles.input}
         onChange={handleChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
       />
     ) : (
       <input
@@ -47,11 +60,13 @@ const Input: FC<InputProps> = ({
         id={id}
         className={styles.input}
         onChange={handleChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
       />
     );
 
   return (
-    <div className={styles.field}>
+    <div className={`${styles.field} ${isFocused ? styles.focused : ''}`}>
       {label && (
         <label htmlFor={id} className={styles.label}>
           {label}
