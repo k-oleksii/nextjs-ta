@@ -1,6 +1,6 @@
 import Socials from '@/components/socials/Socials';
 import { getIcon } from '@/helpers/getIcon';
-import stylesGlobal from '@/styles/Layout.module.scss';
+import { default as stylesGlobal } from '@/styles/Layout.module.scss';
 import { EnumIcons } from '@/types';
 import { FC } from 'react';
 import styles from './ContactUs.module.scss';
@@ -8,7 +8,7 @@ import ContactUsForm from './form/ContactUsForm';
 
 const ContactUs: FC = () => {
   return (
-    <div className='container mx-auto'>
+    <div className={stylesGlobal.constrained}>
       <h1 className={stylesGlobal.title}>Contact Us</h1>
       <p className={stylesGlobal.subtitle}>
         Any question or remarks? Just write us a message!
@@ -41,9 +41,12 @@ const ContactUs: FC = () => {
               132 Dartmouth Street Boston, Massachusetts 02156 United States
             </li>
           </ul>
-          <Socials />
+          <Socials additionalClass={styles.socials} />
+          <div className={styles.decorate}></div>
         </div>
-        <ContactUsForm />
+        <div className={styles.form}>
+          <ContactUsForm />
+        </div>
       </div>
     </div>
   );

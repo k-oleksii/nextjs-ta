@@ -23,4 +23,7 @@ export enum EnumIcons {
   twitter = 'twitter',
   user = 'user',
   inst = 'inst',
+  burger = 'burger',
+  close = 'close',
+  arrow = 'arrow',
 }

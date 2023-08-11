@@ -53,7 +53,7 @@ export const footerData = [
       },
       {
         link: '/forum',
-        name: 'forum',
+        name: 'Forum',
       },
     ],
   },

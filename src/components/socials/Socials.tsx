@@ -4,9 +4,17 @@ import Link from 'next/link';
 import { FC } from 'react';
 import styles from './Socials.module.scss';
 
-const Socials: FC = () => {
+interface ISocialsProps {
+  additionalClass?: string;
+}
+
+const Socials: FC<ISocialsProps> = ({ additionalClass }) => {
+  const socialsClass = [styles.socials];
+  if (additionalClass) {
+    socialsClass.push(additionalClass);
+  }
   return (
-    <div className={styles.socials}>
+    <div className={socialsClass.join(' ')}>
       <Link href='https://twitter.com/' target='_blank' className={styles.item}>
         {getIcon(EnumIcons.twitter)}
       </Link>

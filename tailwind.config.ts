@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+const pluginButton = require('./src/plugins/button');
 
 const config: Config = {
   content: [
@@ -23,9 +24,22 @@ const config: Config = {
         lightGray: '#e0e0e0',
         lightSilver: '#c9c9c9',
       },
+      decorate: {
+        darkGray: '#484848',
+        jetBlack: '#1a1a1a',
+      },
     },
     extend: {
+      boxShadow: {
+        none: 'none',
+        sm: '0 -2px 4px rgba(0, 0, 0, 0.25)',
+      },
       container: {
+        padding: {
+          DEFAULT: '20px',
+          sm: '20px',
+          lg: '0',
+        },
         screens: {
           none: '100%',
           sm: '640px',
@@ -60,6 +74,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [pluginButton],
 };
 export default config;

@@ -1,21 +1,46 @@
 .contact {
-  @apply flex flex-col gap-y-[30px] pt-[5px] px-[5px] pb-16 bg-white rounded-[10px];
+  @apply flex flex-col gap-y-[30px] pt-[5px] px-[5px] bg-white rounded-[10px];
 }
 
 .info {
-  @apply w-full pt-[40px] pr-[20px] pb-[36px] pl-[40px] text-white bg-black rounded-[10px];
+  @apply relative w-full pt-[15px] pb-[25px] px-[15px] text-center text-white bg-black rounded-[5px] rounded-br-none overflow-hidden;
+}
+
+.decorate {
+  @apply absolute left-[calc(100%-80px)] top-[calc(100%-106px)] xl:left-auto xl:-right-[89px] xl:top-auto xl:-bottom-[86px] w-[192px] h-[196px] w-[297px] h-[295px];
+
+  &::before,
+  &::after {
+    @apply content-[''] absolute rounded-full;
+  }
+
+  &::before {
+    @apply -top-[4px] left-0 xl:top-0 z-10 w-[54px] h-[54px] xl:w-[138px] xl:h-[138px] bg-decorate-darkGray bg-opacity-50;
+  }
+
+  &::after {
+    @apply right-0 bottom-0 w-[192px] h-[192px] xl:w-[269px] xl:h-[269px] bg-decorate-jetBlack;
+  }
 }
 
 .title {
-  @apply block font-semibold text-xl md:text-3xl;
+  @apply block font-semibold text-xl xl:text-3xl;
+
+  &:not(:last-child) {
+    @apply mb-1.5;
+  }
 }
 
 .subtitle {
-  @apply block text-xs md:text-lg text-secondary-lightSilver;
+  @apply block text-xs xl:text-lg text-secondary-lightSilver;
+
+  &:not(:last-child) {
+    @apply mb-3 md:mb-20 xl:mb-[111px];
+  }
 }
 
 .contactIcon {
-  @apply block w-6 h-6;
+  @apply block shrink-0 w-6 h-6;
 
   svg {
     @apply w-full h-full fill-white;
@@ -23,15 +48,89 @@
 }
 
 .list {
+  @apply w-4/5 mx-auto text-2xs;
+
   li {
-    @apply flex items-center gap-x-[25px];
+    @apply flex flex-col items-center gap-y-2.5;
 
     &:not(:last-child) {
-      @apply mb-6;
+      @apply mb-[15px] xl:mb-[50px];
     }
   }
 
   a {
-    @apply flex items-center gap-x-[25px];
+    @apply flex flex-col items-center gap-y-2.5 transition-all;
+
+    &:hover {
+      @apply opacity-70;
+    }
+  }
+
+  &:not(:last-child) {
+    @apply mb-[58px] xl:mb-[159px];
+  }
+}
+
+.form {
+  @apply relative flex-1 pb-16;
+
+  &::after {
+    @apply content-[""] absolute -bottom-[19px] md:-bottom-[24px] xl:-bottom-[85px] left-[61px] w-[117px] h-[98px] xl:w-[240px] xl:h-[241px] bg-[url('/letter-send.png')] bg-no-repeat bg-contain;
+  }
+}
+
+@screen md {
+  .contact {
+    @apply flex-row gap-x-10 pl-[5px] py-[5px] pr-10;
+  }
+
+  .info {
+    @apply flex flex-col shrink-0 w-[300px] py-8 pr-5 pl-8 text-left rounded-[10px] rounded-br-none;
+  }
+
+  .list {
+    @apply w-full;
+
+    li {
+      @apply flex-row items-center gap-y-0 gap-x-[25px];
+    }
+
+    a {
+      @apply flex-row items-center gap-y-0 gap-x-[25px];
+    }
+  }
+
+  .form {
+    @apply pt-8;
+
+    &::after {
+      @apply left-auto right-[86px];
+    }
+  }
+
+  .socials {
+    @apply mt-auto;
+  }
+}
+
+@screen xl {
+  .contact {
+    @apply gap-x-[50px] pr-[50px];
+  }
+
+  .info {
+    @apply pt-10 px-10 pb-9;
+  }
+
+  .list {
+    @apply ml-0 text-base pr-20;
+  }
+
+  .info {
+    @apply w-[491px];
+  }
+
+  .form {
+    @apply pt-[55px];
   }
 }

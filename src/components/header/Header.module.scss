@@ -1,7 +1,15 @@
 .header {
-  @apply py-[30px] md:py-[40px];
+  @apply relative z-50 py-[30px] lg:py-[40px] shadow-sm lg:shadow-none;
 }
 
 .content {
-  @apply flex justify-between items-center pr-[20px];
+  @apply flex justify-between items-center lg:pr-[20px];
+}
+
+.btn {
+  @apply w-6 h-6 lg:hidden;
+
+  svg {
+    @apply w-full h-full fill-black;
+  }
 }

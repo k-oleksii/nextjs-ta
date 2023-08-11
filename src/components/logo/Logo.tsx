@@ -8,6 +8,7 @@ interface ILogoProps {
 
 const Logo: FC<ILogoProps> = ({ additionalClass }) => {
   const logoClass = [styles.logo];
+
   if (additionalClass) {
     logoClass.push(additionalClass);
   }

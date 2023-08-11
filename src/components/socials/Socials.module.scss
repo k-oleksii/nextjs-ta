@@ -3,9 +3,17 @@
 }
 
 .item {
-  @apply flex justify-center items-center w-[30px] h-[30px] bg-secondary-charcoalGray rounded-full;
+  @apply flex justify-center items-center w-[30px] h-[30px] bg-secondary-charcoalGray rounded-full transition-all duration-300;
 
   svg {
-    @apply block w-[15px] fill-white;
+    @apply block w-[15px] fill-white transition-all duration-300;
+  }
+
+  &:hover {
+    @apply bg-white;
+
+    svg {
+      @apply fill-black;
+    }
   }
 }

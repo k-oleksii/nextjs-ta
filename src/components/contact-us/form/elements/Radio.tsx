@@ -43,7 +43,7 @@ const Radio: FC<RadioProps> = ({
 
   return (
     <div className={styles.field}>
-      {caption && <span>{caption}</span>}
+      {caption && <span className={styles.caption}>{caption}</span>}
       <div className={styles.group}>{radioElements}</div>
     </div>
   );

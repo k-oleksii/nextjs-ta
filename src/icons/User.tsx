@@ -20,7 +20,7 @@ export const User = () => {
         <rect y='0.0626221' width='16' height='17.5325' fill='url(#pattern0)' />
       </mask>
       <g mask='url(#mask0_1_690)'>
-        <rect y='0.0626221' width='16' height='17.5325' fill='black' />
+        <rect y='0.0626221' width='16' height='17.5325' />
       </g>
       <defs>
         <pattern

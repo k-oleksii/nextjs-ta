@@ -1,6 +1,5 @@
 'use client';
 import { createMessage } from '@/services/createMessage';
-import stylesBtn from '@/styles/Button.module.scss';
 import { IContact } from '@/types';
 import { FC, FormEvent, useState } from 'react';
 import Input from './elements/Input';
@@ -58,8 +57,8 @@ const ContactUsForm: FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className='flex flex-wrap'>
-        <div className='w-2/4'>
+      <div className='grid md:grid-cols-2 gap-y-5 gap-x-9 xl:gap-x-[39px] xl:gap-y-[45px] mb-[25px] xl:mb-[45px]'>
+        <div className='w-full'>
           <Input
             id='firstName'
             name='firstName'
@@ -67,7 +66,7 @@ const ContactUsForm: FC = () => {
             onChange={handleInputChange}
           />
         </div>
-        <div className='w-2/4'>
+        <div className='w-full'>
           <Input
             id='lastName'
             name='lastName'
@@ -75,7 +74,7 @@ const ContactUsForm: FC = () => {
             onChange={handleInputChange}
           />
         </div>
-        <div className='w-2/4'>
+        <div className='w-full'>
           <Input
             id='email'
             label='Email'
@@ -84,7 +83,7 @@ const ContactUsForm: FC = () => {
             onChange={handleInputChange}
           />
         </div>
-        <div className='w-2/4'>
+        <div className='w-ful'>
           <Input
             id='phone'
             tag='phone'
@@ -94,7 +93,7 @@ const ContactUsForm: FC = () => {
             onChange={handleInputChange}
           />
         </div>
-        <div className='w-full'>
+        <div className='w-full col-span-full'>
           <Radio
             options={options}
             caption='Select Subject?'
@@ -102,7 +101,7 @@ const ContactUsForm: FC = () => {
             onChange={handleRadioChange}
           />
         </div>
-        <div className='w-full'>
+        <div className='w-full col-span-full	'>
           <Input
             id='message'
             label='Message'
@@ -112,9 +111,11 @@ const ContactUsForm: FC = () => {
           />
         </div>
       </div>
-      <button type='submit' className={stylesBtn.btn}>
-        Send Message
-      </button>
+      <div className='flex md:justify-end'>
+        <button type='submit' className='button'>
+          Send Message
+        </button>
+      </div>
     </form>
   );
 };
